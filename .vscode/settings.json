@@ -1,0 +1,9 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.wordWrap": "on",
+    "eslint.validate": ["javascript"],
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true
+}
