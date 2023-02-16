@@ -5,13 +5,31 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "*" ]
+    branches:
+      - master
+    paths-ignore: # Don't trigger on files that are updated by the CI
+      - '**/README.*'
+      - '**/.github/workflows/*'
+      - '**/*.yml'
+      - '**/jest.config.js'
+      - '**/*.json'
+      - '**/.*'
   pull_request:
-    branches: [ "master" ]
+    types: 
+      - synchronize
+    branches: 
+      - master
+    paths-ignore: # Don't trigger on files that are updated by the CI
+      - '**/README.*'
+      - '**/.github/workflows/*'
+      - '**/*.yml'
+      - '**/jest.config.js'
+      - '**/*.json'
+      - '**/.*'
 
 jobs:
   build:
-
+    name: Run NodeJs CI
     runs-on: ubuntu-latest
 
     strategy:
