@@ -13,7 +13,6 @@ on:
       - '**/*.yml'
       - '**/jest.config.js'
       - '**/*.json'
-      - '**/.*'
   pull_request:
     types: 
       - synchronize
@@ -25,7 +24,6 @@ on:
       - '**/*.yml'
       - '**/jest.config.js'
       - '**/*.json'
-      - '**/.*'
 
 jobs:
   build:
