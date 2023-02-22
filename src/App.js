@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Game from './components/tictactoe/game';
 import ResponsiveAppBar from './components/appBar/AppBar';
-import Button from '@mui/material/Button';
+import { Outlet } from 'react-router-dom';
 
 // AWS Amplify for Authentication:
 // import { Amplify, Auth } from 'aws-amplify';
@@ -20,7 +18,8 @@ function App() {
   return (
     <div className="App">
       <ResponsiveAppBar/>
-      <header className="App-header">
+      <Outlet/>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <a
           className="App-link"
@@ -30,7 +29,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
